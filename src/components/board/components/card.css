@@ -1,0 +1,40 @@
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 7px;
+    width: 150px;
+    height: 200px;
+    transition: all .3s ease;
+    cursor: pointer;
+    background-image: url('/src/assets/first-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border: 1px solid #f0f0f050;
+}
+
+.card:hover{
+    filter: drop-shadow(0 0 0.75rem rgba(128, 128, 128, 0.307));
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back{
+    background-color: #F0F0F0;
+    background-image: none;
+    border: 1px solid #dedede;
+    transition: all .3s ease;
+}
+
+.back::after{
+    content: '?';
+    font-weight: 700;
+    text-align: center;
+    font-size: 35px;
+}
